@@ -1,9 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Extension name",
+  "name": "Vol kozak",
   "version": "0.1",
-  "description": "Extension description",
-  "permissions": [],
+  "description": "Vol kozak desc",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "tabCapture"
+  ],
   "browser_action": {
     "default_popup": "index.html"
   },
@@ -16,7 +20,9 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": [],
+      "matches": [
+        "https://*/*"
+      ],
       "js": [
         "content.bundle.js"
       ],

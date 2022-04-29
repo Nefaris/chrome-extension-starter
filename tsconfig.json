@@ -5,8 +5,6 @@
     "moduleResolution": "Node",
     "removeComments": true,
     "sourceMap": true,
-    "types": [
-      "chrome"
-    ]
+    "types": ["chrome"]
   }
 }

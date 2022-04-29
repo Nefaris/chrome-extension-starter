@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome extension starter pack",
+  "version": "0.1",
+  "description": "Chrome extension starter pack",
+  "permissions": ["tabs", "activeTab"],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.bundle.js"]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://*/*"],
+      "js": ["content.bundle.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
